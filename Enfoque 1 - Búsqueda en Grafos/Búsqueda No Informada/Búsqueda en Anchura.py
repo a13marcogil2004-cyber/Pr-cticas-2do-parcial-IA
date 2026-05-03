@@ -8,3 +8,16 @@ grafo = {
     'D': [],
     'E': ['F'],
     'F': []
+
+}
+
+def bfs(grafo, inicio):
+    visitados = set()
+    cola = deque([inicio])
+
+    while cola:
+        nodo = cola.popleft()
+
+        if nodo not in visitados:
+            print(nodo, end=" ")
+            visitados.add(nodo)
